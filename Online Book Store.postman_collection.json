@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "e9778656-9835-4712-b9db-ba3adbd6f496",
+		"_postman_id": "f9c551a2-0ca4-484d-a778-9a50453fcfbd",
 		"name": "Online Book Store",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -32,7 +32,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\n        \"name\": \"The Lord of the Rings\",\n        \"description\": \"One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them\",\n        \"author\": \" J.R.R. Tolkien\",\n        \"type\": \"FICTION\",\n        \"price\": 800,\n        \"isbn\": \"98-9874-2345-134\"\n    }",
+					"raw": "    {\n        \"name\": \"Wings of Fire\",\n        \"description\": \"Wings of Fire ,a Fiction book\",\n        \"author\": \" APJ Abdul Kalam\",\n        \"type\": \"FICTION\",\n        \"price\": 800,\n        \"isbn\": \"98-9874-2345-123\"\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -61,7 +61,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"The Lord of the Rings UPDATE\",\n    \"description\": \"One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them\",\n    \"author\": \" J.R.R. Tolkien\",\n    \"type\": \"FICTION\",\n    \"price\": 1200,\n    \"isbn\": \"98-9874-2345-134\"\n}",
+					"raw": "{\n    \"name\": \"Wings of Fire -UPDATE\",\n    \"description\": \"Wings of Fire ,a Fiction book\",\n    \"author\": \"APJ Abdul Kalam\",\n    \"type\": \"FICTION\",\n    \"price\": 1200,\n    \"isbn\": \"98-9874-2345-123\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -69,7 +69,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/update-book?id=1",
+					"raw": "http://localhost:8080/api/update-book?id=3",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -82,7 +82,7 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "1"
+							"value": "3"
 						}
 					]
 				}
@@ -121,7 +121,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/checkout?books=1,2&promotionCode=OCT2021-01",
+					"raw": "http://localhost:8080/api/checkout?books=3&promotionCode=APR-2022-01",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -134,11 +134,11 @@
 					"query": [
 						{
 							"key": "books",
-							"value": "1,2"
+							"value": "3"
 						},
 						{
 							"key": "promotionCode",
-							"value": "OCT2021-01"
+							"value": "APR-2022-01"
 						}
 					]
 				}
