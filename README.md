@@ -41,6 +41,8 @@ Goto project and select OnlineBookStoreApplication.java and run as Java Applicat
 
 Use Dockerfile from project root directory to build docker images
 
+docker build -f Dockerfile -t onlinebookstoreapp .
+
 # Database Access
 
 Hit this Datasource URL in a browser: http://localhost:8080/h2-console
@@ -72,7 +74,7 @@ OTHERS(30)
 
 # Application Testing in Postman
 
-Use below given postman collection from project root folder
+Use below given postman collection from project root folder and import in Postman
 
 Online Book Store.postman_collection.json
 
