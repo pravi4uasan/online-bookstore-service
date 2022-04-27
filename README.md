@@ -43,8 +43,23 @@ Use Dockerfile from project root directory to build docker images
 
 docker build -f Dockerfile -t onlinebookstoreapp .
 
+To List images :
+
+ docker images
+ 
+
 # Docker Run :
  docker run -p 9900:8080 onlinebookstoreapp
+ 
+ To verify container created :
+ 
+ docker ps 
+ 
+ To Stop Container :
+ 
+ docker stop 6e1ewrwtt (conatiner id)
+   
+   
 
 # Database Access
 
