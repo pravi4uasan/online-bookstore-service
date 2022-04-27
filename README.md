@@ -43,6 +43,9 @@ Use Dockerfile from project root directory to build docker images
 
 docker build -f Dockerfile -t onlinebookstoreapp .
 
+# Docker Run :
+ docker run -p 9900:8080 onlinebookstoreapp
+
 # Database Access
 
 Hit this Datasource URL in a browser: http://localhost:8080/h2-console
