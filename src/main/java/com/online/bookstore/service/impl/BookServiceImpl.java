@@ -85,6 +85,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Integer getTotalBookPrice(List<Long> books, String promotionCode) {
+    	 log.info("Inside getTotalBookPrice promotionCode::"+ promotionCode);
         AtomicReference<Integer> finalPrice = new AtomicReference<>(0);
         books.forEach(id -> {
             Optional<Book> ids = bookRepository.findById(id);
@@ -94,24 +95,24 @@ public class BookServiceImpl implements BookService {
                     discount.updateAndGet(v -> v + (book.getPrice() * BookType.discountPercentage(book.getType())) / 100);
                     finalPrice.updateAndGet(v -> v + (book.getPrice() - discount.get()));
                     log.info("*************Calculating Discount *****************");
-                    log.info("Book Name {}", book.getName());
-                    log.info("Book Price {}", book.getPrice());
-                    log.info("Book Type {}", book.getType());
-                    log.info("Book Type Promotion Percentage {}", BookType.discountPercentage(book.getType()));
-                    log.info("Discount Amount {}", discount.get());
-                    log.info("finalPrice after discount {}", (book.getPrice() - discount.get()));
+                    log.info("Book Name :{}", book.getName());
+                    log.info("Book Price : {}", book.getPrice());
+                    log.info("Book Type : {}", book.getType());
+                    log.info("Book Type Promotion Percentage :{}", BookType.discountPercentage(book.getType()));
+                    log.info("Discount Amount :{}", discount.get());
+                    log.info("finalPrice after discount: {}", (book.getPrice() - discount.get()));
                     log.info("******************************");
                 } else {
                     log.info("******************************");
-                    log.info("Book Name {}", book.getName());
-                    log.info("Book Price {}", book.getPrice());
-                    log.info("Book Type {}", book.getType());
+                    log.info("Book Name : {}", book.getName());
+                    log.info("Book Price :{}", book.getPrice());
+                    log.info("Book Type: {}", book.getType());
                     log.info("******************************");
                     finalPrice.updateAndGet(v -> v + (book.getPrice()));
                 }
             });
         });
-        log.info("finalPriceAfterDiscount {}", finalPrice.get());
+        log.info("finalPriceAfterDiscount :{}", finalPrice.get());
         return finalPrice.get();
     }
 
