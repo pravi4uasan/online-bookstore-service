@@ -45,7 +45,7 @@ User Name : sa
 
 Password :
 
-# Disclount Catalogue :
+# Discount Catalogue :
 FICTION(10)
 
 COMIC(0)
