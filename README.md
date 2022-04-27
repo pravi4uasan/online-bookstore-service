@@ -41,6 +41,8 @@ Goto project and select OnlineBookStoreApplication.java and run as Java Applicat
 
 Use Dockerfile from project root directory to build docker images
 
+docker build -f Dockerfile -t onlinebookstoreapp .
+
 # Database Access
 
 Hit this Datasource URL in a browser: http://localhost:8080/h2-console
