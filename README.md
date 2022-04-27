@@ -72,7 +72,7 @@ OTHERS(30)
 
 # Application Testing in Postman
 
-Use below given postman collection from project root folder
+Use below given postman collection from project root folder and import in Postman
 
 Online Book Store.postman_collection.json
 
