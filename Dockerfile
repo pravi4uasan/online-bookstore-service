@@ -12,4 +12,6 @@ WORKDIR /opt/app
 
 COPY ${JAR_FILE} online-bookstore-service.jar
 
+EXPOSE 8080
+
 ENTRYPOINT ["java","-jar", "online-bookstore-service.jar"]
